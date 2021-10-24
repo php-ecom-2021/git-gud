@@ -1,0 +1,19 @@
+{
+    "name": "webkenth/webshop",
+    "type": "project",
+    "license": "proprietary",
+    "autoload": {
+        "psr-4": {
+            "Webkenth\\Webshop\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WebKenth",
+            "email": "mkk@webkenth.dk"
+        }
+    ],
+    "require-dev": {
+        "laravel/sail": "^1.12"
+    }
+}
