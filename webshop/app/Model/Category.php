@@ -1,6 +1,4 @@
-<?php
-
-require_once 'app/Model/Product.php';
+<?php namespace App\Model;
 
 class Category{
 	public $name = '';
@@ -12,7 +10,7 @@ class Category{
 
 	public function initialize(){
 		for ($i=0; $i < 50; $i++) {
-			$product = new Product(
+			$product = new \App\Model\Product(
 				'Product_'.time(),
 				rand(1,1000)
 			);

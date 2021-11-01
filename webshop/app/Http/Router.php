@@ -1,4 +1,5 @@
-<?php 
+
+<?php namespace App\Http;
 
 class Router{
     public $routes = [];
@@ -29,6 +30,6 @@ class Router{
          * This is a good way to show developers something
          * unexpected happened 
          */ 
-        throw new Exception('No Routes named '.$uri.' defined');
+        throw new \Exception('No Routes named '.$uri.' defined');
     }
 }

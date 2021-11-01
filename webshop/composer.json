@@ -4,16 +4,17 @@
     "license": "proprietary",
     "autoload": {
         "psr-4": {
-            "Webkenth\\Webshop\\": "app/"
+            "App\\": "app/"
         }
     },
     "authors": [
         {
-            "name": "WebKenth",
+            "name": "Martin Knudsen",
             "email": "mkk@webkenth.dk"
         }
     ],
-    "require-dev": {
+    "require": {
+        "twig/twig": "^3.3",
         "laravel/sail": "^1.12"
     }
 }

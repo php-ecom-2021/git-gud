@@ -1,4 +1,4 @@
-<?php 
+<?php namespace App\Model;
 
 class Product {
 	public $name = '';
@@ -11,3 +11,4 @@ class Product {
 		$this->image = $image;
 	}
 }
+

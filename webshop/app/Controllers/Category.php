@@ -1,6 +1,5 @@
 <?php
-	require 'app/Model/Category.php';
-	$category = new Category('Car');
+	$category = new \App\Model\Category('Car');
 	$category->initialize();
 	$products = $category->fetchProducts();
 ?>
@@ -18,7 +17,7 @@
 
     <div class="products">
     	<?php foreach($products as $product): ?>
-    		<form class="product"> 
+    		<div class="product"> 
                 <div class="product__name">
                     <?= $product->name ?> 
                 </div>
@@ -29,9 +28,11 @@
                     <?= $product->price ?> ,- 
                 </div>
                 <div class="product__action">
-                    <button type="submit">Add to Cart</button>
+                    <form class="product__add-to-cart">
+                        <button type="submit">Add to Cart</button>
+                    </form>
                 </div>
-            </form>
+            </div>
     	<?php endforeach; ?>
     </div>
 
