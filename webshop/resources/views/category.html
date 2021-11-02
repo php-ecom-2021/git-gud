@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Category Page</title>
+</head>
+<body>
+	<h1>{{ title }}</h1>
+	<ol>
+		{% for product in products %}
+    		{{ product | json_encode }}
+		{% else %}
+		    No Products have been found.
+		{% endfor %}
+	</ol>
+</body>
+</html>

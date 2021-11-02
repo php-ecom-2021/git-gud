@@ -1,4 +1,3 @@
-
 <?php namespace App\Http;
 
 class Router{
@@ -23,7 +22,12 @@ class Router{
         if(array_key_exists($uri, $this->routes))
         {   
             // If a route exists we want to return the controller
-            return $this->routes[$uri];
+            try{
+                $controller = new $this->routes[$uri];
+                return $controller->render();
+            }catch(\Exceptions $e){
+                dump($e->getMessage());
+            }
         }
         /* 
          * No routes have been found, throw an exception

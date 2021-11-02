@@ -9,6 +9,8 @@ class Product {
 		$this->name = $name;
 		$this->price = $price;
 		$this->image = $image;
+
+		new \Exception();
 	}
 }
 
